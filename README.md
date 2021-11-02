@@ -1,16 +1,17 @@
-# device_wiki_app
+# 장치위키 (Device Wiki)
 
-A new Flutter project.
+## 기간
 
-## Getting Started
+2021.11.03 ~ 나도 모름
 
-This project is a starting point for a Flutter application.
+## 목적
 
-A few resources to get you started if this is your first Flutter project:
+IT 기기가 많아짐에 따라 정보의 다양성이 높아지고 있다. 기기에 대한 정보는 대부분 유튜브나 블로그 등에서 습득하고 있으나 대부분의 기기를 아우르는 정보 플랫폼이 없는 상황이다.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+따라서 기기에 대한 정보를 보다 보편적으로 쉽게 제공하고자 기획하게 되었다.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 개발 환경
+
+- Language: **Dart**
+- Framework: **Flutter**
+- IDE: **VS Code**
