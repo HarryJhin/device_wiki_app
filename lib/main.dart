@@ -10,19 +10,19 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.blue,
       ),
-      home: MaterialFlutterApp(),
+      home: FontApp(),
     );
   }
 }
 
-class MaterialFlutterApp extends StatefulWidget {
+class FontApp extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _MaterialFlutterApp();
+    return _FontApp();
   }
 }
 
-class _MaterialFlutterApp extends State<MaterialFlutterApp> {
+class _FontApp extends State<FontApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +34,14 @@ class _MaterialFlutterApp extends State<MaterialFlutterApp> {
           child: Column(
             children: const <Widget>[
               Icon(Icons.android),
-              Text('android'),
+              Text(
+                'android',
+                style: TextStyle(
+                  fontFamily: 'D2Coding',
+                  fontSize: 30,
+                  color: Colors.blue,
+                ),
+              ),
             ],
             mainAxisAlignment: MainAxisAlignment.center,
           ),
