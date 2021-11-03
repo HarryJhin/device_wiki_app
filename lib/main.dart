@@ -1,48 +1,75 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '장치위키',
+      title: 'Calculator',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: '홈페이지'),
+      home: CalculatorPage(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
+class CalculatorPage extends StatefulWidget {
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  _CalculatorPageState createState() => _CalculatorPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _CalculatorPageState extends State<CalculatorPage> {
+  var sum = '';
+  TextEditingController value1 = TextEditingController();
+  TextEditingController value2 = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text('Calculator'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[
-            Text(
-              '공사중',
-            ),
-          ],
+      body: Container(
+        child: Center(
+          child: Column(
+            children: <Widget>[
+              Padding(
+                padding: EdgeInsets.all(15),
+                child: Text('Flutter'),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 20, right: 20),
+                child: TextField(
+                  keyboardType: TextInputType.number,
+                  controller: value1,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 20, right: 20),
+                child: TextField(
+                  keyboardType: TextInputType.number,
+                  controller: value2,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(15),
+                child: ElevatedButton(
+                  onPressed: () {},
+                  child: Row(
+                    children: <Widget>[
+                      Icon(Icons.add),
+                      Text('Add'),
+                    ],
+                  ),
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.amber),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
