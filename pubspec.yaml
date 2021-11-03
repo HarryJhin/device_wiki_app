@@ -22,5 +22,9 @@ dev_dependencies:
   flutter_lints: ^1.0.0
 
 flutter:
-
   uses-material-design: true
+  fonts:
+    - family: KoPubWorld
+      fonts:
+        - asset: font/koPubWorld/KoPubWorld Dotum Medium.ttf
+          weight: 400
