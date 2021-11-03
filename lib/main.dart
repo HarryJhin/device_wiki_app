@@ -1,48 +1,43 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '장치위키',
+      title: 'Material Design Flutter App',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: Colors.blue,
       ),
-      home: const MyHomePage(title: '홈페이지'),
+      home: MaterialFlutterApp(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
+class MaterialFlutterApp extends StatefulWidget {
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<StatefulWidget> createState() {
+    return _MaterialFlutterApp();
+  }
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MaterialFlutterApp extends State<MaterialFlutterApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: const Text('Material Design Flutter App'),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[
-            Text(
-              '공사중',
-            ),
-          ],
+        child: Container(
+          child: Column(
+            children: const <Widget>[
+              Icon(Icons.android),
+              Text('android'),
+            ],
+            mainAxisAlignment: MainAxisAlignment.center,
+          ),
         ),
       ),
     );
