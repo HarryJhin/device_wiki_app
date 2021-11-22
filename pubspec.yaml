@@ -9,14 +9,13 @@ environment:
   sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
-
   flutter:
     sdk: flutter
-
   cupertino_icons: ^1.0.2
   notion_api: ^1.2.0
   sqflite: ^2.0.0+3
   path: ^1.8.0
+  webview_flutter: ^2.3.1
 
 dev_dependencies:
   flutter_test:
@@ -29,5 +28,10 @@ flutter:
   fonts:
     - family: KoPubWorld
       fonts:
-        - asset: font/koPubWorld/KoPubWorld Dotum Medium.ttf
+        - asset: font/KoPubWorld/KoPubWorld Dotum Medium.ttf
           weight: 400
+    - family: D2Coding
+      fonts:
+        - asset: font/D2Coding.ttf
+          weight: 400
+          
