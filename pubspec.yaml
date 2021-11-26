@@ -25,13 +25,13 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-  fonts:
-    - family: KoPubWorld
-      fonts:
-        - asset: font/KoPubWorld/KoPubWorld Dotum Medium.ttf
-          weight: 400
-    - family: D2Coding
-      fonts:
-        - asset: font/D2Coding.ttf
-          weight: 400
+  # fonts:
+  #   - family: KoPubWorld
+  #     fonts:
+  #       - asset: font/KoPubWorld/KoPubWorld Dotum Medium.ttf
+  #         weight: 400
+  #   - family: D2Coding
+  #     fonts:
+  #       - asset: font/D2Coding.ttf
+  #         weight: 400
           
