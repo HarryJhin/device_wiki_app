@@ -1,3 +1,6 @@
+import 'package:device_wiki_app/laptop_repository.dart';
+import 'package:device_wiki_app/types/failure.dart';
+import 'package:device_wiki_app/types/laptop.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -6,9 +9,12 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  late Future<List<Laptop>> _futureLaptops;
+
   @override
   void initState() {
     super.initState();
+    _futureLaptops = LaptopRepository().get();
   }
 
   @override
@@ -34,7 +40,33 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      body: Container(),
+      body: FutureBuilder<List<Laptop>>(
+          future: _futureLaptops,
+          builder: (context, snapshot) {
+            if (snapshot.hasData) {
+              final laptops = snapshot.data!;
+              return ListView.builder(
+                itemCount: laptops.length,
+                itemBuilder: (BuildContext context, int index) {
+                  final laptop = laptops[index];
+                  return Container(
+                    margin: const EdgeInsets.all(8.0),
+                    child: ListTile(
+                      title: Text(laptop.name),
+                    ),
+                  );
+                },
+              );
+            } else if (snapshot.hasError) {
+              final failure = snapshot.error as Failure;
+              return Center(
+                child: Text(failure.message),
+              );
+            }
+            return const Center(
+              child: CircularProgressIndicator(),
+            );
+          }),
     );
   }
 }
