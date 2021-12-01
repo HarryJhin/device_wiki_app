@@ -22,7 +22,7 @@ class LaptopRepository {
       final responese = await _client.post(Uri.parse(url), headers: {
         HttpHeaders.authorizationHeader:
             'Bearer ${dotenv.env['NOTION_API_KEY']}',
-        'Notion-Version': '2021-08-16',
+        'Notion-Version': '${dotenv.env['NOTION-VERSION']}',
       });
 
       if (responese.statusCode == 200) {
