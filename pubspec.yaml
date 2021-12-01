@@ -11,11 +11,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.2
-  notion_api: ^1.2.0
-  sqflite: ^2.0.0+3
-  path: ^1.8.0
-  webview_flutter: ^2.3.1
+  http: ^0.13.4
+  intl: ^0.17.0
+  flutter_dotenv: ^5.0.2
 
 dev_dependencies:
   flutter_test:
