@@ -51,8 +51,25 @@ class _HomePageState extends State<HomePage> {
                   final laptop = laptops[index];
                   return Container(
                     margin: const EdgeInsets.all(8.0),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10.0),
+                      border: Border.all(
+                        width: 2.0,
+                        color: Colors.blue,
+                      ),
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Colors.black26,
+                          offset: Offset(0, 2),
+                          blurRadius: 6.0,
+                        ),
+                      ],
+                    ),
                     child: ListTile(
                       title: Text(laptop.name),
+                      subtitle: Text(laptop.url),
+                      onTap: () {},
                     ),
                   );
                 },
