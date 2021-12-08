@@ -3,6 +3,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'pages/home.dart';
 import 'pages/search.dart';
 import 'pages/login.dart';
+import 'pages/webview.dart';
 
 void main() async {
   await dotenv.load(fileName: '.env');
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => HomePage(),
+        '/': (context) => WebViewPage(),
         '/search': (context) => SearchPage(),
         '/login': (context) => LoginPage(),
       },
